@@ -1,0 +1,19 @@
+body {
+    font-family: system-ui;
+    background-color: lightgray;
+}
+main {
+    background-color: white;
+    border: 1px solid;
+    padding: 3px;
+}
+.header {
+    background-color: rgb(97, 56, 97);
+    color: white;
+}
+.header .sitename {
+    font-size: 23px;
+}
+header .shortdesc {
+    font-size: 11px;
+}
