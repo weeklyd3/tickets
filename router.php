@@ -5,7 +5,9 @@ function execute($action) {
     switch ($action) {
         default:
             $title = "Latest issues";
-            echo 'blablabla';
+            require_once "display/latest_issues.php";
+            latestIssuesHeader();
+            displayLatestIssues();
             break;
     }
     return $title;
