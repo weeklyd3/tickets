@@ -16,7 +16,7 @@ function latestIssuesHeader($page = 0) {
         $title = "No issues";
         ?><p>Nothing was found on this page. <?php
         if (isset($_SESSION['userid'])) { ?><a href="index.php?do=new">Create a new thread?</a></p><?php }
-        return;
+        return $p;
     } else {
         if (isset($_SESSION['userid'])) {
             ?><a href="index.php?do=new">New thread</a><?php
