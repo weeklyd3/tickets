@@ -1,5 +1,10 @@
 <?php
 class thread {
+    public $title;
+    public $closed;
+    public $posts;
+    public $id;
+    public $time;
     function __construct($title, $posts, $id, $time, $closed = false) {
         $this->title = $title;
         $this->closed = $closed;
@@ -24,6 +29,11 @@ class thread {
     }
 }
 class post {
+    public $parent;
+    public $author;
+    public $content;
+    public $id;
+    public $time;
     function __construct($user, $content, $id, $parent, $time) {
         $this->parent = $parent;
         $this->author = $user;
@@ -37,6 +47,10 @@ class post {
     }
 }
 class user {
+    public $id;
+    public $joined;
+    public $remote;
+    public $refreshed;
     function __construct($id, $remoteinfo, $joined, $refreshed) {
         $this->id = $id;
         $this->joined = $joined;
