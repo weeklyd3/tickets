@@ -13,7 +13,7 @@ if (!$thread) {
 }
 $title = $thread->title;
 $firstpost = $thread->posts[0];
-if (!isset($_SESSION['commentposttoken'])) $_SESSION['commentposttoken'] = sha1(time() . $_SESSION['userid'] . random_int(10, 100));
+if (!isset($_SESSION['commentposttoken']) && isset($_SESSION['userid'])) $_SESSION['commentposttoken'] = sha1(time() . $_SESSION['userid'] . random_int(10, 100));
 
 if (isset($_POST['action']) && !isset($_SESSION['userid'])) {
     ?><div class="error">We tried to post your response, but it appears that you have been logged out automatically. Below is the text you tried to submit. Please save it somewhere, log in, and attempt to submit it again.<pre><?php echo htmlspecialchars($_POST['text']); ?></pre></div><?php
